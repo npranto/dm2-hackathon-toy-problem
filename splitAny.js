@@ -2,13 +2,11 @@
 
 function splitAny(param) {
 	
-	let errorType = "";
+	let errorType = "object";
 	if(typeof param === 'boolean'){
 		errorType = 'boolean';
 	}else if(typeof param === 'undefined'){
 		errorType = 'undefined';
-	}else {
-		errorType = 'object';
 	}
 	if (!param) {
 		throw new TypeError(`Expected an array, string, object, number, or function, instead got ${errorType} ${param}`);
